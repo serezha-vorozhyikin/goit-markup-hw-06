@@ -372,7 +372,7 @@ body {
   margin-bottom: 20px;
 }
 
-.chech-text {
+.check-text {
   display: flex;
   align-items: center;
   font-weight: 400;
@@ -382,13 +382,34 @@ body {
   color: #757575;
 }
 
-.chech-text span {
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon {
+  fill: transparent;
+}
+
+.modal-check:checked + .check-text span {
+  background: var(--accent-color);
+  border: none;
+}
+
+.modal-check:checked + .check-text .check-icon {
+  fill: #ffffff;
 }
 
 .check-link {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.7px;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
@@ -406,6 +427,13 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 10px 55px;
+}
+
+.modal-field-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .close-btn {
